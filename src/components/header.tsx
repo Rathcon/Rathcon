@@ -66,14 +66,11 @@ export function Header() {
                 <NavLink key={link.href} {...link} />
                 ))}
             </nav>
-        </div>
-        
-        <div className="hidden md:flex items-center ml-6">
             <Button asChild>
             <Link href="/contact">Get a Quote</Link>
             </Button>
         </div>
-
+        
         <div className="md:hidden">
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
@@ -84,11 +81,8 @@ export function Header() {
             </SheetTrigger>
             <SheetContent side="right">
               <div className="flex flex-col h-full">
-                <div className="flex justify-between items-center border-b pb-4">
+                <div className="flex items-center border-b pb-4">
                   <Logo />
-                  <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)}>
-                    <X />
-                  </Button>
                 </div>
                 <nav className="flex flex-col gap-6 text-lg mt-8">
                   {navLinks.map((link) => (
