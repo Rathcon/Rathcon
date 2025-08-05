@@ -36,24 +36,22 @@ export function ProjectsSection() {
             {featuredProjects.map((project) => (
               <CarouselItem key={project.id} className="md:basis-1/2 lg:basis-1/3">
                 <div className="p-1">
-                  <Card className="overflow-hidden group shadow-none border-none rounded-lg">
+                  <Card className="overflow-hidden group shadow-lg border-border rounded-lg">
                     <CardContent className="p-0 relative">
                       <Image
                         src={project.image}
                         alt={project.title}
                         width={600}
                         height={400}
-                        className="object-cover aspect-[3/2] w-full group-hover:scale-105 transition-transform duration-300 rounded-lg"
+                        className="object-cover aspect-[3/2] w-full group-hover:scale-105 transition-transform duration-300 rounded-t-lg"
                         data-ai-hint={project.dataAiHint}
                       />
                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-lg"></div>
-                    </CardContent>
-                    <CardFooter className="p-4 absolute bottom-0 w-full">
-                       <div>
+                       <div className="absolute bottom-4 left-4">
                          <Badge variant="secondary" className="rounded-md">{project.category}</Badge>
                          <h3 className="text-lg font-bold font-headline text-white mt-1">{project.title}</h3>
                        </div>
-                    </CardFooter>
+                    </CardContent>
                   </Card>
                 </div>
               </CarouselItem>

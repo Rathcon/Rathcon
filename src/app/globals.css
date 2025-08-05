@@ -4,72 +4,71 @@
 
 @layer base {
   :root {
-    --background: 210 69% 11%; /* #0A192F */
-    --foreground: 225 67% 88%; /* #CCD6F6 */
+    --background: 220 13% 18%; /* #282a36 */
+    --foreground: 210 40% 98%; /* #f8f8f2 */
 
-    --card: 212 63% 18%; /* #102A4C */
-    --card-foreground: 225 67% 88%; /* #CCD6F6 */
+    --card: 220 13% 23%; /* #343746 */
+    --card-foreground: 210 40% 98%;
 
-    --popover: 212 63% 18%; /* #102A4C */
-    --popover-foreground: 225 67% 88%; /* #CCD6F6 */
+    --popover: 220 13% 18%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 168 100% 70%; /* #64FFDA - Teal */
-    --primary-foreground: 210 69% 11%; /* #0A192F - Dark Blue for text on Teal */
+    --primary: 45 93% 47%; /* #E8B91A - Gold */
+    --primary-foreground: 220 13% 10%; /* Darker for text on gold */
 
-    --secondary: 213 50% 25%; /* #1F3A5F */
-    --secondary-foreground: 225 67% 88%; /* #CCD6F6 */
+    --secondary: 220 14% 28%; /* #414558 */
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 213 38% 31%; /* #304A6D */
-    --muted-foreground: 223 36% 74%; /* #A8B2D1 */
+    --muted: 220 14% 28%;
+    --muted-foreground: 220 9% 55%; /* #8a8d9e */
 
-    --accent: 168 100% 70%; /* #64FFDA - Teal for hover/focus */
-    --accent-foreground: 210 69% 11%; /* #0A192F - Dark Blue for text on Teal accent */
+    --accent: 45 93% 52%; /* Brighter Gold */
+    --accent-foreground: 220 13% 10%;
     
-    --destructive: 0 72% 51%; /* Adjusted for better visibility on dark bg */
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 212 49% 28%; /* #234569 */
-    --input: 209 49% 22%; /* #1D3953 */
-    --ring: 168 100% 70%; /* #64FFDA - Teal for focus rings */
+    --border: 220 14% 28%;
+    --input: 220 14% 28%;
+    --ring: 45 93% 47%;
 
     --radius: 0.5rem;
 
-    /* Chart colors themed for dark background */
-    --chart-1: 168 80% 60%; /* Teal variant */
-    --chart-2: 225 60% 70%; /* Light gray variant */
-    --chart-3: 210 50% 50%; /* Blue variant */
-    --chart-4: 180 70% 55%; /* Cyan variant */
-    --chart-5: 200 65% 65%; /* Another blue/gray variant */
+    --chart-1: 45 93% 47%;
+    --chart-2: 210 40% 70%;
+    --chart-3: 45 93% 60%;
+    --chart-4: 210 40% 85%;
+    --chart-5: 45 93% 70%;
   }
 
   .dark {
-    --background: 210 69% 11%; /* #0A192F */
-    --foreground: 225 67% 88%; /* #CCD6F6 */
+    --background: 220 13% 10%; /* #16181D */
+    --foreground: 210 40% 98%;
 
-    --card: 212 63% 18%; /* #102A4C */
-    --card-foreground: 225 67% 88%; /* #CCD6F6 */
+    --card: 220 13% 15%; /* #21232B */
+    --card-foreground: 210 40% 98%;
 
-    --popover: 212 63% 18%; /* #102A4C */
-    --popover-foreground: 225 67% 88%; /* #CCD6F6 */
+    --popover: 220 13% 10%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 168 100% 70%; /* #64FFDA - Teal */
-    --primary-foreground: 210 69% 11%; /* #0A192F - Dark Blue for text on Teal */
+    --primary: 45 93% 55%; /* Brighter Gold for Dark Mode */
+    --primary-foreground: 220 13% 10%;
 
-    --secondary: 213 50% 25%; /* #1F3A5F */
-    --secondary-foreground: 225 67% 88%; /* #CCD6F6 */
+    --secondary: 220 14% 20%; /* #2C2F3E */
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 213 38% 31%; /* #304A6D */
-    --muted-foreground: 223 36% 74%; /* #A8B2D1 */
+    --muted: 220 14% 20%;
+    --muted-foreground: 220 9% 55%;
 
-    --accent: 168 100% 70%; /* #64FFDA - Teal for hover/focus */
-    --accent-foreground: 210 69% 11%; /* #0A192F - Dark Blue for text on Teal accent */
+    --accent: 45 93% 60%;
+    --accent-foreground: 220 13% 10%;
     
-    --destructive: 0 72% 51%; /* Adjusted for better visibility on dark bg */
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 212 49% 28%; /* #234569 */
-    --input: 209 49% 22%; /* #1D3953 */
-    --ring: 168 100% 70%; /* #64FFDA - Teal for focus rings */
+    --border: 220 14% 20%;
+    --input: 220 14% 20%;
+    --ring: 45 93% 55%;
   }
 }
 

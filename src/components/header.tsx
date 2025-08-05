@@ -29,7 +29,7 @@ export function Header() {
         onClick={() => setIsOpen(false)}
         className={cn(
           'text-sm font-medium transition-colors hover:text-primary',
-          isActive ? 'text-primary' : 'text-foreground/60',
+          isActive ? 'text-primary' : 'text-muted-foreground',
           className
         )}
       >
