@@ -56,12 +56,11 @@ export function Header() {
         isScrolled ? "border-border bg-background/80 backdrop-blur-lg" : "border-transparent bg-background"
     )}>
       <div className="container flex h-16 items-center">
-        <div className="mr-4 hidden md:flex">
+        <div className="mr-auto">
           <Logo />
         </div>
 
-        <div className="flex flex-1 items-center justify-between">
-          <div className="md:hidden">
+        <div className="md:hidden">
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
@@ -85,21 +84,18 @@ export function Header() {
             </Sheet>
           </div>
 
-           <div className="md:hidden flex-1 flex justify-center">
-             <Logo />
-           </div>
-
-          <nav className="hidden md:flex md:items-center md:gap-6 text-sm">
-            {navLinks.map((link) => (
-              <NavLink key={link.href} {...link} />
-            ))}
-          </nav>
-          
-          <div className="flex items-center">
-            <Button asChild>
-              <Link href="/contact">Get a Quote</Link>
-            </Button>
-          </div>
+        <div className="hidden md:flex items-center gap-6">
+            <nav className="flex items-center gap-6 text-sm">
+                {navLinks.map((link) => (
+                <NavLink key={link.href} {...link} />
+                ))}
+            </nav>
+            
+            <div className="flex items-center">
+                <Button asChild>
+                <Link href="/contact">Get a Quote</Link>
+                </Button>
+            </div>
         </div>
       </div>
     </header>
