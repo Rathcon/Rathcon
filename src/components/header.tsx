@@ -60,30 +60,6 @@ export function Header() {
           <Logo />
         </div>
 
-        <div className="md:hidden">
-            <Sheet open={isOpen} onOpenChange={setIsOpen}>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon">
-                  <Menu className="h-6 w-6" />
-                  <span className="sr-only">Toggle Menu</span>
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="left" className="pr-0 bg-background">
-                <div className="flex items-center justify-between p-4 border-b">
-                   <Logo />
-                   <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)}>
-                     <X className="h-6 w-6" />
-                   </Button>
-                </div>
-                <nav className="flex flex-col items-start gap-6 p-4">
-                  {navLinks.map((link) => (
-                    <NavLink key={link.href} {...link} className="text-lg" />
-                  ))}
-                </nav>
-              </SheetContent>
-            </Sheet>
-          </div>
-
         <div className="hidden md:flex items-center gap-6">
             <nav className="flex items-center gap-6 text-sm">
                 {navLinks.map((link) => (
@@ -91,7 +67,7 @@ export function Header() {
                 ))}
             </nav>
             
-            <div className="flex items-center">
+            <div className="flex items-center ml-6">
                 <Button asChild>
                 <Link href="/contact">Get a Quote</Link>
                 </Button>
