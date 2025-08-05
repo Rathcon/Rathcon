@@ -4,10 +4,7 @@ import Link from 'next/link';
 export function Logo() {
   return (
     <Link href="/" className="flex items-center gap-2">
-      <Image src="/logo.png" alt="Rathcon Constructions Logo" width={40} height={40} />
-      <span className="text-xl font-bold font-headline text-primary">
-        Rathcon Constructions
-      </span>
+      <Image src="/logo.png" alt="Rathcon Constructions Logo" width={60} height={60} />
     </Link>
   );
 }
