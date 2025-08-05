@@ -28,7 +28,7 @@ export function HeroSection() {
             </div>
             <div className="relative h-64 md:h-auto md:aspect-square">
               <Image
-                src="https://source.unsplash.com/random/800x800/?construction,architecture"
+                src="https://placehold.co/800x800.png"
                 alt="Modern building under construction"
                 fill
                 className="rounded-lg object-cover"
