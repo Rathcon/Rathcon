@@ -43,25 +43,33 @@
   }
 
   .dark {
-    --background: 0 0% 5%;
+    --background: 210 69% 11%; /* #0A192F */
     --foreground: 225 67% 88%; /* #CCD6F6 */
+
     --card: 212 63% 18%; /* #102A4C */
     --card-foreground: 225 67% 88%; /* #CCD6F6 */
+
     --popover: 212 63% 18%; /* #102A4C */
     --popover-foreground: 225 67% 88%; /* #CCD6F6 */
+
     --primary: 168 100% 70%; /* #64FFDA - Teal */
     --primary-foreground: 210 69% 11%; /* #0A192F - Dark Blue for text on Teal */
+
     --secondary: 213 50% 25%; /* #1F3A5F */
     --secondary-foreground: 225 67% 88%; /* #CCD6F6 */
+
     --muted: 213 38% 31%; /* #304A6D */
     --muted-foreground: 223 36% 74%; /* #A8B2D1 */
+
     --accent: 168 100% 70%; /* #64FFDA - Teal for hover/focus */
     --accent-foreground: 210 69% 11%; /* #0A192F - Dark Blue for text on Teal accent */
+    
     --destructive: 0 72% 51%; /* Adjusted for better visibility on dark bg */
     --destructive-foreground: 0 0% 98%;
+
     --border: 212 49% 28%; /* #234569 */
     --input: 209 49% 22%; /* #1D3953 */
-    --ring: 168 100% 70%;
+    --ring: 168 100% 70%; /* #64FFDA - Teal for focus rings */
   }
 }
 
