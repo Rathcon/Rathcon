@@ -73,7 +73,7 @@ export default function AboutPage() {
                 </p>
             </div>
             <div className="relative">
-                <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-border -translate-x-1/2 hidden md:block"></div>
+                <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-primary/20 -translate-x-1/2 hidden md:block"></div>
                 {timeline.map((item, index) => (
                     <div key={item.year} className="relative mb-8 md:mb-12">
                         <div className="hidden md:block absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 bg-primary rounded-full p-2">
