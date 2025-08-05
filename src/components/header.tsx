@@ -66,12 +66,43 @@ export function Header() {
                 <NavLink key={link.href} {...link} />
                 ))}
             </nav>
-            
-            <div className="flex items-center ml-6">
-                <Button asChild>
-                <Link href="/contact">Get a Quote</Link>
-                </Button>
-            </div>
+        </div>
+        
+        <div className="hidden md:flex items-center ml-6">
+            <Button asChild>
+            <Link href="/contact">Get a Quote</Link>
+            </Button>
+        </div>
+
+        <div className="md:hidden">
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon">
+                <Menu />
+                <span className="sr-only">Toggle Menu</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right">
+              <div className="flex flex-col h-full">
+                <div className="flex justify-between items-center border-b pb-4">
+                  <Logo />
+                  <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)}>
+                    <X />
+                  </Button>
+                </div>
+                <nav className="flex flex-col gap-6 text-lg mt-8">
+                  {navLinks.map((link) => (
+                    <NavLink key={link.href} {...link} className="py-2" />
+                  ))}
+                </nav>
+                <div className="mt-auto">
+                    <Button asChild className="w-full" size="lg">
+                        <Link href="/contact" onClick={() => setIsOpen(false)}>Get a Quote</Link>
+                    </Button>
+                </div>
+              </div>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </header>
