@@ -46,17 +46,23 @@ export function Footer() {
           <div className="space-y-4">
             <h4 className="font-headline font-semibold">Our Guarantee</h4>
             <div className="flex flex-wrap gap-2">
-              <Badge variant="outline" className="flex items-center gap-1 border-primary/50 text-primary">
-                <ShieldCheck className="h-3 w-3" />
-                <span>Licensed</span>
+              <Badge variant="outline" className="border-primary/50 text-primary">
+                <div className="flex items-center gap-1">
+                  <ShieldCheck className="h-3 w-3" />
+                  <span>Licensed</span>
+                </div>
               </Badge>
-              <Badge variant="outline" className="flex items-center gap-1 border-primary/50 text-primary">
-                <ShieldCheck className="h-3 w-3" />
-                <span>Insured</span>
+              <Badge variant="outline" className="border-primary/50 text-primary">
+                 <div className="flex items-center gap-1">
+                    <ShieldCheck className="h-3 w-3" />
+                    <span>Insured</span>
+                  </div>
               </Badge>
-               <Badge variant="outline" className="flex items-center gap-1 border-primary/50 text-primary">
-                <ShieldCheck className="h-3 w-3" />
-                <span>Eco-Friendly</span>
+               <Badge variant="outline" className="border-primary/50 text-primary">
+                  <div className="flex items-center gap-1">
+                    <ShieldCheck className="h-3 w-3" />
+                    <span>Eco-Friendly</span>
+                  </div>
               </Badge>
             </div>
           </div>
