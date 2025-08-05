@@ -54,7 +54,7 @@ export default function ProjectsPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredProjects.map(project => (
-                    <Card key={project.id} className="overflow-hidden group shadow-lg">
+                    <Card key={project.id} className="overflow-hidden group">
                         <CardContent className="p-0 relative">
                         <Image
                             src={project.image}

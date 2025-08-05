@@ -57,7 +57,7 @@ export default function AboutPage() {
               alt="Team of construction workers"
               width={600}
               height={700}
-              className="rounded-lg shadow-xl object-cover"
+              className="rounded-lg object-cover"
               data-ai-hint="construction team"
             />
           </div>
@@ -81,7 +81,7 @@ export default function AboutPage() {
                         </div>
                         <div className={`flex md:items-center ${index % 2 === 0 ? 'md:flex-row-reverse' : ''} flex-col md:flex-row`}>
                             <div className="md:w-5/12">
-                               <div className={`p-6 bg-card rounded-lg shadow-md ${index % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>
+                               <div className={`p-6 bg-card rounded-lg ${index % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>
                                     <p className="text-2xl font-bold font-headline text-primary">{item.year}</p>
                                     <h3 className="text-xl font-semibold font-headline mt-2">{item.event}</h3>
                                     <p className="text-muted-foreground mt-1 text-sm">{item.description}</p>

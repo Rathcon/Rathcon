@@ -56,7 +56,7 @@ export function TestimonialsSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {testimonials.map((testimonial) => (
-            <Card key={testimonial.id} className="p-6 shadow-lg">
+            <Card key={testimonial.id} className="p-6">
               <CardContent className="p-0">
                 <div className="flex items-start gap-4">
                     <Quote className="h-8 w-8 text-primary/50 shrink-0" />
