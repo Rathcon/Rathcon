@@ -40,7 +40,7 @@ const allServices: Service[] = [
 export default function ServicesPage() {
   return (
     <>
-      <section className="bg-secondary py-20 text-center">
+      <section className="bg-secondary py-16 text-center">
         <div className="container">
           <h1 className="text-4xl md:text-5xl font-bold font-headline">Our Services</h1>
           <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -49,7 +49,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="py-16">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {allServices.map((service) => (

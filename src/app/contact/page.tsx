@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin } from 'lucide-react';
 export default function ContactPage() {
   return (
     <>
-      <section className="bg-secondary py-20 text-center">
+      <section className="bg-secondary py-16 text-center">
         <div className="container">
           <h1 className="text-4xl md:text-5xl font-bold font-headline">Contact Us</h1>
           <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -13,7 +13,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="py-16">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-16">
             <div className="space-y-8">

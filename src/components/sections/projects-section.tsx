@@ -16,7 +16,7 @@ const featuredProjects: Project[] = [
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="py-12 md:py-24 bg-secondary">
+    <section id="projects" className="py-16 md:py-20 bg-secondary">
       <div className="container">
         <div className="text-center space-y-4 mb-12">
           <h2 className="text-3xl md:text-4xl font-bold font-headline">Featured Projects</h2>

@@ -11,7 +11,7 @@ const timeline = [
 export default function AboutPage() {
   return (
     <>
-      <section className="bg-secondary py-20 text-center">
+      <section className="bg-secondary py-16 text-center">
         <div className="container">
           <h1 className="text-4xl md:text-5xl font-bold font-headline">About Construct Digital</h1>
           <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -20,7 +20,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="py-16">
         <div className="container grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h2 className="text-3xl font-bold font-headline">Our Mission</h2>
@@ -64,7 +64,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-secondary">
+      <section className="py-16 bg-secondary">
           <div className="container">
             <div className="text-center space-y-4 mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold font-headline">Our Journey</h2>

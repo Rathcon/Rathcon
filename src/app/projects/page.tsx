@@ -29,7 +29,7 @@ export default function ProjectsPage() {
 
   return (
     <>
-      <section className="bg-secondary py-20 text-center">
+      <section className="bg-secondary py-16 text-center">
         <div className="container">
           <h1 className="text-4xl md:text-5xl font-bold font-headline">Our Portfolio</h1>
           <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -38,7 +38,7 @@ export default function ProjectsPage() {
         </div>
       </section>
       
-      <section className="py-16 md:py-24">
+      <section className="py-16">
         <div className="container">
             <div className="flex justify-center flex-wrap gap-2 mb-12">
                 {categories.map(category => (
