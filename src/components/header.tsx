@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
@@ -19,7 +19,16 @@ const navLinks = [
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const NavLink = ({ href, label, className }: { href: string, label: string, className?: string }) => {
     const isActive = pathname === href;
@@ -28,8 +37,11 @@ export function Header() {
         href={href}
         onClick={() => setIsOpen(false)}
         className={cn(
-          'text-sm font-medium transition-colors hover:text-primary',
+          'relative text-sm font-medium transition-colors hover:text-primary',
           isActive ? 'text-primary' : 'text-muted-foreground',
+          'after:absolute after:bottom-[-2px] after:left-0 after:h-[2px] after:w-full after:bg-primary after:origin-center after:scale-x-0 after:transition-transform after:duration-300',
+          isActive && 'after:scale-x-100',
+          'hover:after:scale-x-100',
           className
         )}
       >
@@ -39,7 +51,10 @@ export function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className={cn(
+        "sticky top-0 z-50 w-full border-b transition-all duration-300",
+        isScrolled ? "border-border bg-background/80 backdrop-blur-lg" : "border-transparent bg-background"
+    )}>
       <div className="container flex h-16 items-center">
         <div className="mr-4 hidden md:flex">
           <Logo />
