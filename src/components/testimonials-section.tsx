@@ -12,7 +12,7 @@ import { useToast } from '@/hooks/use-toast';
 import { Skeleton } from './ui/skeleton';
 
 const initialTestimonials: Testimonial[] = [
-  { id: 1, name: 'John Doe', company: 'Tech Solutions Inc.', quote: "Working with Construct Digital was a game-changer for our new headquarters. Their professionalism, attention to detail, and commitment to deadlines were outstanding. The final result exceeded our expectations, providing a modern and efficient workspace for our team. We couldn't be happier and highly recommend their services.", avatar: 'https://source.unsplash.com/random/100x100/?man,portrait', dataAiHint: 'man portrait' },
+  { id: 1, name: 'John Doe', company: 'Tech Solutions Inc.', quote: "Working with Rathcon Constructions was a game-changer for our new headquarters. Their professionalism, attention to detail, and commitment to deadlines were outstanding. The final result exceeded our expectations, providing a modern and efficient workspace for our team. We couldn't be happier and highly recommend their services.", avatar: 'https://source.unsplash.com/random/100x100/?man,portrait', dataAiHint: 'man portrait' },
   { id: 2, name: 'Jane Smith', company: 'Creative Designs Co.', quote: "The team transformed our outdated office into a vibrant, collaborative environment. Their design sense is impeccable, and they managed the entire project seamlessly from start to finish. Communication was excellent throughout the process. We've seen a noticeable boost in employee morale and productivity since the renovation.", avatar: 'https://source.unsplash.com/random/100x100/?woman,portrait', dataAiHint: 'woman portrait' },
 ];
 

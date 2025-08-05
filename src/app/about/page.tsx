@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { Award, Target, Users, CheckCircle } from 'lucide-react';
 
 const timeline = [
-  { year: '2008', event: 'Company Founded', description: 'Construct Digital was born with a vision to revolutionize the construction industry.' },
+  { year: '2008', event: 'Company Founded', description: 'Rathcon Constructions was born with a vision to revolutionize the construction industry.' },
   { year: '2012', event: 'First Major Commercial Project', description: 'Completed the landmark Downtown Plaza, setting a new standard for excellence.' },
   { year: '2018', event: 'Expanded to Residential Sector', description: 'Began building custom luxury homes, bringing our quality to new homeowners.' },
   { year: '2023', event: '100th Project Completed', description: 'Celebrated a milestone of 100 successful projects, a testament to our commitment.' },
@@ -13,7 +13,7 @@ export default function AboutPage() {
     <>
       <section className="bg-secondary py-12 text-center">
         <div className="container">
-          <h1 className="text-4xl md:text-5xl font-bold font-headline">About Construct Digital</h1>
+          <h1 className="text-4xl md:text-5xl font-bold font-headline">About Rathcon Constructions</h1>
           <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
             Pioneering the future of construction with integrity, quality, and innovation for over 15 years.
           </p>

@@ -38,7 +38,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-primary" />
-                <span>contact@constructdigital.com</span>
+                <span>contact@rathconconstructions.com</span>
               </li>
             </ul>
           </div>
@@ -63,7 +63,7 @@ export function Footer() {
         </div>
 
         <div className="mt-8 pt-8 border-t border-border/50 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Construct Digital. All Rights Reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Rathcon Constructions. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
