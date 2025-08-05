@@ -12,8 +12,8 @@ import { useToast } from '@/hooks/use-toast';
 import { Skeleton } from './ui/skeleton';
 
 const initialTestimonials: Testimonial[] = [
-  { id: 1, name: 'John Doe', company: 'Tech Solutions Inc.', quote: "Working with Construct Digital was a game-changer for our new headquarters. Their professionalism, attention to detail, and commitment to deadlines were outstanding. The final result exceeded our expectations, providing a modern and efficient workspace for our team. We couldn't be happier and highly recommend their services.", avatar: 'https://placehold.co/100x100.png', dataAiHint: 'man portrait' },
-  { id: 2, name: 'Jane Smith', company: 'Creative Designs Co.', quote: "The team transformed our outdated office into a vibrant, collaborative environment. Their design sense is impeccable, and they managed the entire project seamlessly from start to finish. Communication was excellent throughout the process. We've seen a noticeable boost in employee morale and productivity since the renovation.", avatar: 'https://placehold.co/100x100.png', dataAiHint: 'woman portrait' },
+  { id: 1, name: 'John Doe', company: 'Tech Solutions Inc.', quote: "Working with Construct Digital was a game-changer for our new headquarters. Their professionalism, attention to detail, and commitment to deadlines were outstanding. The final result exceeded our expectations, providing a modern and efficient workspace for our team. We couldn't be happier and highly recommend their services.", avatar: 'https://source.unsplash.com/random/100x100/?man,portrait', dataAiHint: 'man portrait' },
+  { id: 2, name: 'Jane Smith', company: 'Creative Designs Co.', quote: "The team transformed our outdated office into a vibrant, collaborative environment. Their design sense is impeccable, and they managed the entire project seamlessly from start to finish. Communication was excellent throughout the process. We've seen a noticeable boost in employee morale and productivity since the renovation.", avatar: 'https://source.unsplash.com/random/100x100/?woman,portrait', dataAiHint: 'woman portrait' },
 ];
 
 type TestimonialWithSummary = Testimonial & { summary?: string; loading?: boolean };
@@ -45,7 +45,7 @@ export function TestimonialsSection() {
   };
 
   return (
-    <section id="testimonials" className="py-16 md:py-20">
+    <section id="testimonials" className="py-12 md:py-16">
       <div className="container">
         <div className="text-center space-y-4 mb-12">
           <h2 className="text-3xl md:text-4xl font-bold font-headline">What Our Clients Say</h2>
@@ -56,13 +56,13 @@ export function TestimonialsSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {testimonials.map((testimonial) => (
-            <Card key={testimonial.id} className="p-6">
+            <Card key={testimonial.id} className="p-6 shadow-none border rounded-lg">
               <CardContent className="p-0">
                 <div className="flex items-start gap-4">
-                    <Quote className="h-8 w-8 text-primary/50 shrink-0" />
+                    <Quote className="h-8 w-8 text-primary/20 shrink-0" />
                     <p className="text-muted-foreground italic">&ldquo;{testimonial.quote}&rdquo;</p>
                 </div>
-                <div className="flex items-center gap-4 mt-4">
+                <div className="flex items-center gap-4 mt-6">
                   <Image
                     src={testimonial.avatar}
                     alt={testimonial.name}
@@ -77,11 +77,11 @@ export function TestimonialsSection() {
                   </div>
                 </div>
 
-                <div className="mt-4 pt-4 border-t">
+                <div className="mt-6 pt-6 border-t">
                   {testimonial.summary ? (
                      <div className="space-y-2">
                         <h4 className="text-sm font-bold flex items-center gap-2"><Bot className="h-4 w-4" /> AI Summary</h4>
-                        <p className="text-sm text-muted-foreground bg-secondary p-3 rounded-md">{testimonial.summary}</p>
+                        <p className="text-sm text-muted-foreground bg-secondary/50 p-3 rounded-md">{testimonial.summary}</p>
                      </div>
                   ) : testimonial.loading ? (
                     <div className="space-y-2">
@@ -89,7 +89,7 @@ export function TestimonialsSection() {
                        <Skeleton className="h-16 w-full" />
                     </div>
                   ) : (
-                    <Button variant="outline" size="sm" onClick={() => handleSummarize(testimonial.id)} disabled={isPending}>
+                    <Button variant="outline" size="sm" onClick={() => handleSummarize(testimonial.id)} disabled={isPending} className="rounded-full">
                       <Bot className="mr-2 h-4 w-4" />
                       Summarize with AI
                     </Button>

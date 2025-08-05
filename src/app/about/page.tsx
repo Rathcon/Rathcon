@@ -11,7 +11,7 @@ const timeline = [
 export default function AboutPage() {
   return (
     <>
-      <section className="bg-secondary py-16 text-center">
+      <section className="bg-secondary py-12 text-center">
         <div className="container">
           <h1 className="text-4xl md:text-5xl font-bold font-headline">About Construct Digital</h1>
           <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -20,7 +20,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-16">
+      <section className="py-12">
         <div className="container grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h2 className="text-3xl font-bold font-headline">Our Mission</h2>
@@ -53,7 +53,7 @@ export default function AboutPage() {
           </div>
           <div>
             <Image
-              src="https://placehold.co/600x700.png"
+              src="https://source.unsplash.com/random/600x700/?construction,team"
               alt="Team of construction workers"
               width={600}
               height={700}
@@ -64,7 +64,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-secondary">
+      <section className="py-12 bg-secondary">
           <div className="container">
             <div className="text-center space-y-4 mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold font-headline">Our Journey</h2>
@@ -75,13 +75,13 @@ export default function AboutPage() {
             <div className="relative">
                 <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-border -translate-x-1/2 hidden md:block"></div>
                 {timeline.map((item, index) => (
-                    <div key={item.year} className="relative mb-8 md:mb-16">
+                    <div key={item.year} className="relative mb-8 md:mb-12">
                         <div className="hidden md:block absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 bg-primary rounded-full p-2">
                              <CheckCircle className="h-5 w-5 text-primary-foreground" />
                         </div>
                         <div className={`flex md:items-center ${index % 2 === 0 ? 'md:flex-row-reverse' : ''} flex-col md:flex-row`}>
                             <div className="md:w-5/12">
-                               <div className={`p-6 bg-card rounded-lg ${index % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>
+                               <div className={`p-6 bg-card rounded-lg shadow-none ${index % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>
                                     <p className="text-2xl font-bold font-headline text-primary">{item.year}</p>
                                     <h3 className="text-xl font-semibold font-headline mt-2">{item.event}</h3>
                                     <p className="text-muted-foreground mt-1 text-sm">{item.description}</p>
