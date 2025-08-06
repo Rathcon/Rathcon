@@ -8,32 +8,32 @@ const allServices: Service[] = [
   {
     icon: Home,
     title: 'Residential Construction',
-    description: 'We build custom homes from the ground up, focusing on quality, durability, and a design that reflects your family\'s needs. Our process is transparent and collaborative.'
+    description: 'We build custom homes from the ground up, focusing on quality, durability, and a design that reflects your family\'s needs. Our comprehensive service includes architectural design, material selection, and construction, ensuring a seamless and transparent process from foundation to finish.'
   },
   {
     icon: Building2,
     title: 'Commercial Construction',
-    description: 'Our expertise covers large-scale commercial projects including office buildings, retail centers, and industrial facilities. We prioritize budget, schedule, and quality.'
+    description: 'Our expertise covers large-scale commercial projects including office buildings, retail centers, and industrial facilities. We prioritize budget adherence, on-time delivery, and superior quality to create spaces that are both impressive and functional.'
   },
   {
     icon: Paintbrush,
     title: 'Interior Design & Finishing',
-    description: 'Our in-house design team works with you to create stunning and functional interior spaces, handling everything from layout to final finishes and fixtures.'
+    description: 'Our in-house design team works with you to create stunning and functional interior spaces. We handle everything from space planning and layout to material selection, color palettes, and the final finishes and fixtures that bring your vision to life.'
   },
   {
     icon: Wrench,
     title: 'Renovations & Remodeling',
-    description: 'Modernize your home or commercial space with our comprehensive renovation services. We handle kitchen and bath remodels, additions, and complete overhauls.'
+    description: 'Modernize your home or commercial space with our comprehensive renovation services. We specialize in kitchen and bath remodels, home additions, basement finishing, and complete commercial overhauls, transforming your existing property to meet your current needs.'
   },
   {
     icon: HardHat,
     title: 'Project Management',
-    description: 'Our certified project managers oversee every phase of your project, ensuring it is completed on time, within budget, and to the highest standards of safety.'
+    description: 'Our certified project managers oversee every phase of your project. They act as your single point of contact, ensuring clear communication, and that your project is completed on time, within budget, and to the highest standards of safety and quality.'
   },
   {
     icon: LandPlot,
     title: 'Pre-Construction & Planning',
-    description: 'We offer detailed pre-construction services, including site analysis, feasibility studies, budgeting, and value engineering to set your project up for success.'
+    description: 'We offer detailed pre-construction services to set your project up for success. This includes site analysis, feasibility studies, detailed cost estimation, value engineering, and strategic planning to mitigate risks and ensure a smooth construction process.'
   },
 ];
 

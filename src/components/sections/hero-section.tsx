@@ -9,13 +9,13 @@ export function HeroSection() {
       <div className="container">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="space-y-6 text-center md:text-left">
-               <h1 className="text-4xl md:text-5xl font-bold font-headline tracking-tight">
+               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-headline tracking-tight">
                   Building Your Vision,
                   <br />
                   <span className="text-primary">Creating Reality.</span>
                 </h1>
                 <p className="text-lg text-muted-foreground max-w-lg mx-auto md:mx-0">
-                  We are a team of dedicated professionals committed to delivering high-quality construction services. From concept to completion, we bring your ideas to life.
+                  Welcome to Rathcon Constructions, where we transform your ideas into tangible structures. As a leader in the construction industry, we are dedicated to delivering high-quality craftsmanship, innovative solutions, and unparalleled client satisfaction. From initial concept to final completion, we are your trusted partner in bringing your vision to life.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                   <Button size="lg" asChild className="rounded-full">

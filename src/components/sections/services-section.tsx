@@ -8,22 +8,22 @@ const services: Service[] = [
   {
     icon: Home,
     title: 'Residential Construction',
-    description: 'Building custom homes with attention to detail and quality craftsmanship, tailored to your lifestyle.'
+    description: 'We build custom homes with unparalleled attention to detail and quality craftsmanship, creating spaces that are perfectly tailored to your lifestyle and needs.'
   },
   {
     icon: Building2,
     title: 'Commercial Construction',
-    description: 'From office buildings to retail spaces, we deliver functional and impressive commercial properties.'
+    description: 'From state-of-the-art office buildings to large-scale retail spaces, we deliver functional, aesthetic, and impressive commercial properties on time and on budget.'
   },
   {
     icon: Paintbrush,
     title: 'Interior Design',
-    description: 'Our design team creates beautiful and functional interiors that reflect your personal style.'
+    description: 'Our talented design team creates beautiful and functional interiors that reflect your personal style, enhancing the comfort and value of your space.'
   },
   {
     icon: Wrench,
     title: 'Renovations & Remodeling',
-    description: 'Transform your existing space with our expert renovation and remodeling services.'
+    description: 'Breathe new life into your existing space with our expert renovation and remodeling services. We handle projects of all sizes with precision and care.'
   },
 ];
 
@@ -32,9 +32,9 @@ export function ServicesSection() {
     <section id="services" className="py-16 md:py-20">
       <div className="container">
         <div className="text-center space-y-4 mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold font-headline">Our Services</h2>
+          <h2 className="text-3xl md:text-4xl font-bold font-headline">Our Core Services</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            We offer a wide range of construction services to meet the diverse needs of our clients.
+            We offer a comprehensive suite of construction services designed to meet the diverse needs of our clients, from initial planning to final execution.
           </p>
         </div>
 
@@ -56,7 +56,7 @@ export function ServicesSection() {
 
         <div className="text-center mt-12">
             <Button asChild size="lg" variant="outline">
-                <Link href="/services">View All Services</Link>
+                <Link href="/services">Discover All Our Services</Link>
             </Button>
         </div>
       </div>
