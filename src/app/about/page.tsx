@@ -1,6 +1,13 @@
+'use client';
 import Image from 'next/image';
 import { Award, Target, Users } from 'lucide-react';
-import { TimelineAnimation } from '@/components/timeline-animation';
+import dynamic from 'next/dynamic';
+
+const TimelineAnimation = dynamic(() => import('@/components/timeline-animation').then(mod => mod.TimelineAnimation), {
+  ssr: false,
+  loading: () => <div className="h-96 w-full bg-muted rounded-lg flex items-center justify-center"><p>Loading Animation...</p></div>
+});
+
 
 const timeline = [
   { year: '2008', event: 'Company Founded', description: 'Rathcon Constructions was born with a vision to revolutionize the construction industry.' },
