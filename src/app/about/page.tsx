@@ -1,13 +1,6 @@
 'use client';
 import Image from 'next/image';
 import { Award, Target, Users } from 'lucide-react';
-import dynamic from 'next/dynamic';
-
-const TimelineAnimation = dynamic(() => import('@/components/timeline-animation').then(mod => mod.TimelineAnimation), {
-  ssr: false,
-  loading: () => <div className="h-96 w-full bg-muted rounded-lg flex items-center justify-center"><p>Loading Animation...</p></div>
-});
-
 
 const timeline = [
   { year: '2008', event: 'Company Founded', description: 'Rathcon Constructions was born with a vision to revolutionize the construction industry.' },
@@ -80,8 +73,21 @@ export default function AboutPage() {
                     Tracing our path from a small startup to an industry leader.
                 </p>
             </div>
-            <div className="relative h-96">
-                <TimelineAnimation data={timeline} />
+            <div className="relative max-w-4xl mx-auto">
+              <div className="absolute left-1/2 top-0 h-full w-0.5 bg-border -translate-x-1/2"></div>
+              {timeline.map((item, index) => (
+                <div key={item.year} className={`relative mb-8 flex items-center justify-between w-full ${index % 2 === 0 ? 'flex-row-reverse' : ''}`}>
+                    <div className="order-1 w-5/12"></div>
+                    <div className="z-10 order-1 flex items-center justify-center w-8 h-8 rounded-full bg-primary shadow-lg">
+                        <div className="w-3 h-3 bg-primary-foreground rounded-full"></div>
+                    </div>
+                    <div className="order-1 w-5/12 px-6 py-4 text-left rounded-lg shadow-xl bg-card">
+                       <p className="mb-2 text-sm font-bold text-primary">{item.year}</p>
+                       <h3 className="mb-3 font-bold text-lg font-headline">{item.event}</h3>
+                       <p className="text-sm leading-snug tracking-wide text-muted-foreground">{item.description}</p>
+                   </div>
+                </div>
+              ))}
             </div>
           </div>
       </section>
