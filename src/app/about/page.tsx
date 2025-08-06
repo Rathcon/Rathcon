@@ -72,14 +72,14 @@ export default function AboutPage() {
                     Tracing our path from a small startup to an industry leader.
                 </p>
             </div>
-            <div className="relative">
-                <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-primary/20 -translate-x-1/2 hidden md:block"></div>
+            <div className="relative ps-4">
+                <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-primary/20 md:-translate-x-1/2"></div>
                 {timeline.map((item, index) => (
-                    <div key={item.year} className="relative mb-8 md:mb-12">
-                        <div className="hidden md:block absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 bg-primary rounded-full p-2">
+                    <div key={item.year} className="relative mb-8">
+                        <div className="absolute -left-2 top-1 md:left-1/2 md:top-1/2 md:-translate-y-1/2 md:-translate-x-1/2 bg-primary rounded-full p-2">
                              <CheckCircle className="h-5 w-5 text-primary-foreground" />
                         </div>
-                        <div className={`flex md:items-center ${index % 2 === 0 ? 'md:flex-row-reverse' : ''} flex-col md:flex-row`}>
+                        <div className={`md:flex md:items-center ${index % 2 === 0 ? 'md:flex-row-reverse' : ''} ms-8 md:ms-0`}>
                             <div className="md:w-5/12">
                                <div className={`p-6 bg-card rounded-lg shadow-none ${index % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>
                                     <p className="text-2xl font-bold font-headline text-primary">{item.year}</p>
@@ -88,6 +88,7 @@ export default function AboutPage() {
                                 </div>
                             </div>
                             <div className="md:w-2/12"></div>
+                            <div className="w-5/12"></div>
                         </div>
                     </div>
                 ))}
