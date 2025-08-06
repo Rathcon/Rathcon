@@ -75,27 +75,32 @@ export default function AboutPage() {
             <div className="relative">
                 <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-primary/20 -translate-x-1/2"></div>
                 {timeline.map((item, index) => (
-                    <div key={item.year} className="relative mb-8 flex justify-center">
-                       <div className={`w-1/2 ${index % 2 === 0 ? 'text-right pr-8' : 'pl-8'}`}>
-                         {index % 2 === 0 && (
-                            <div className="p-6 bg-card rounded-lg shadow-none text-right">
-                                <p className="text-2xl font-bold font-headline text-primary">{item.year}</p>
-                                <h3 className="text-xl font-semibold font-headline mt-2">{item.event}</h3>
-                                <p className="text-muted-foreground mt-1 text-sm">{item.description}</p>
-                            </div>
-                         )}
+                    <div key={item.year} className="relative group mb-8 flex justify-center items-center">
+                       <div className="absolute w-full h-0.5 bg-primary/20 top-1/2 -translate-y-1/2 z-0">
+                         <div className="w-full h-full bg-primary/20 group-hover:bg-card transition-colors duration-300"></div>
                        </div>
-                        <div className="absolute top-1/2 -translate-y-1/2 bg-primary rounded-full p-2">
-                             <CheckCircle className="h-5 w-5 text-primary-foreground" />
-                        </div>
-                       <div className={`w-1/2 ${index % 2 !== 0 ? 'text-left pl-8' : 'pr-8'}`}>
-                         {index % 2 !== 0 && (
-                            <div className="p-6 bg-card rounded-lg shadow-none text-left">
-                                <p className="text-2xl font-bold font-headline text-primary">{item.year}</p>
-                                <h3 className="text-xl font-semibold font-headline mt-2">{item.event}</h3>
-                                <p className="text-muted-foreground mt-1 text-sm">{item.description}</p>
-                            </div>
-                         )}
+                       <div className="relative z-10 flex w-full">
+                           <div className={`w-1/2 flex ${index % 2 === 0 ? 'justify-end pr-8' : 'justify-start pl-8'}`}>
+                             {index % 2 !== 0 && (
+                               <div className="p-6 bg-card rounded-lg shadow-lg w-full md:w-auto text-left">
+                                   <p className="text-2xl font-bold font-headline text-primary">{item.year}</p>
+                                   <h3 className="text-xl font-semibold font-headline mt-2">{item.event}</h3>
+                                   <p className="text-muted-foreground mt-1 text-sm">{item.description}</p>
+                               </div>
+                             )}
+                           </div>
+                           <div className="bg-primary rounded-full p-2 flex-shrink-0">
+                                 <CheckCircle className="h-5 w-5 text-primary-foreground" />
+                           </div>
+                           <div className={`w-1/2 flex ${index % 2 === 0 ? 'justify-start pl-8' : 'justify-end pr-8'}`}>
+                              {index % 2 === 0 && (
+                                <div className="p-6 bg-card rounded-lg shadow-lg w-full md:w-auto text-left">
+                                    <p className="text-2xl font-bold font-headline text-primary">{item.year}</p>
+                                    <h3 className="text-xl font-semibold font-headline mt-2">{item.event}</h3>
+                                    <p className="text-muted-foreground mt-1 text-sm">{item.description}</p>
+                                </div>
+                              )}
+                           </div>
                        </div>
                     </div>
                 ))}
