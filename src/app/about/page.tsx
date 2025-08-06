@@ -73,29 +73,33 @@ export default function AboutPage() {
                 </p>
             </div>
             <div className="relative">
-                <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-border -translate-x-1/2"></div>
+                <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-border/50 -translate-x-1/2 group-hover:bg-border transition-colors duration-300"></div>
                 {timeline.map((item, index) => (
-                    <div key={item.year} className="relative mb-8 flex justify-center items-center">
+                    <div key={item.year} className="relative mb-8 flex justify-center items-center group">
                        <div className="relative z-10 flex w-full items-center">
-                           <div className={`w-1/2 flex ${index % 2 === 0 ? 'justify-end pr-8 text-right' : 'justify-start pl-8 text-left'}`}>
-                             {index % 2 !== 0 && (
-                               <div className="p-6 bg-card rounded-lg shadow-lg w-full">
-                                   <p className="text-2xl font-bold font-headline text-primary">{item.year}</p>
-                                   <h3 className="text-xl font-semibold font-headline mt-2">{item.event}</h3>
-                                   <p className="text-muted-foreground mt-1 text-sm">{item.description}</p>
+                           <div className={`w-1/2 flex items-center ${index % 2 === 0 ? 'justify-end pr-8' : 'justify-start pl-8'}`}>
+                                <div className={`w-full group-hover:scale-105 transition-transform duration-300 ${index % 2 !== 0 ? 'text-left' : 'text-right'}`}>
+                                  {index % 2 !== 0 && (
+                                   <div className="p-6 bg-card rounded-lg shadow-lg w-full">
+                                       <p className="text-2xl font-bold font-headline text-primary">{item.year}</p>
+                                       <h3 className="text-xl font-semibold font-headline mt-2">{item.event}</h3>
+                                       <p className="text-muted-foreground mt-1 text-sm">{item.description}</p>
+                                   </div>
+                                 )}
                                </div>
-                             )}
                            </div>
-                           <div className="bg-primary h-4 w-4 rounded-full border-4 border-secondary box-content flex-shrink-0">
+                           <div className="bg-primary h-4 w-4 rounded-full border-4 border-secondary box-content flex-shrink-0 z-20 transition-all duration-300 group-hover:scale-125">
                            </div>
-                           <div className={`w-1/2 flex ${index % 2 === 0 ? 'justify-start pl-8 text-left' : 'justify-end pr-8 text-right'}`}>
-                              {index % 2 === 0 && (
-                                <div className="p-6 bg-card rounded-lg shadow-lg w-full">
-                                    <p className="text-2xl font-bold font-headline text-primary">{item.year}</p>
-                                    <h3 className="text-xl font-semibold font-headline mt-2">{item.event}</h3>
-                                    <p className="text-muted-foreground mt-1 text-sm">{item.description}</p>
-                                </div>
-                              )}
+                           <div className={`w-1/2 flex items-center ${index % 2 === 0 ? 'justify-start pl-8' : 'justify-end pr-8'}`}>
+                              <div className={`w-full group-hover:scale-105 transition-transform duration-300 ${index % 2 === 0 ? 'text-left' : 'text-right'}`}>
+                                {index % 2 === 0 && (
+                                  <div className="p-6 bg-card rounded-lg shadow-lg w-full">
+                                      <p className="text-2xl font-bold font-headline text-primary">{item.year}</p>
+                                      <h3 className="text-xl font-semibold font-headline mt-2">{item.event}</h3>
+                                      <p className="text-muted-foreground mt-1 text-sm">{item.description}</p>
+                                  </div>
+                                )}
+                              </div>
                            </div>
                        </div>
                     </div>
