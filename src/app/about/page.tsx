@@ -73,28 +73,24 @@ export default function AboutPage() {
                 </p>
             </div>
             <div className="relative">
-                <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-primary/20 -translate-x-1/2"></div>
+                <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-border -translate-x-1/2"></div>
                 {timeline.map((item, index) => (
-                    <div key={item.year} className="relative group mb-8 flex justify-center items-center">
-                       <div className="absolute w-full h-0.5 bg-primary/20 top-1/2 -translate-y-1/2 z-0">
-                         <div className="w-full h-full bg-primary/20 group-hover:bg-card transition-colors duration-300"></div>
-                       </div>
-                       <div className="relative z-10 flex w-full">
-                           <div className={`w-1/2 flex ${index % 2 === 0 ? 'justify-end pr-8' : 'justify-start pl-8'}`}>
+                    <div key={item.year} className="relative mb-8 flex justify-center items-center">
+                       <div className="relative z-10 flex w-full items-center">
+                           <div className={`w-1/2 flex ${index % 2 === 0 ? 'justify-end pr-8 text-right' : 'justify-start pl-8 text-left'}`}>
                              {index % 2 !== 0 && (
-                               <div className="p-6 bg-card rounded-lg shadow-lg w-full md:w-auto text-left">
+                               <div className="p-6 bg-card rounded-lg shadow-lg w-full">
                                    <p className="text-2xl font-bold font-headline text-primary">{item.year}</p>
                                    <h3 className="text-xl font-semibold font-headline mt-2">{item.event}</h3>
                                    <p className="text-muted-foreground mt-1 text-sm">{item.description}</p>
                                </div>
                              )}
                            </div>
-                           <div className="bg-primary rounded-full p-2 flex-shrink-0">
-                                 <CheckCircle className="h-5 w-5 text-primary-foreground" />
+                           <div className="bg-primary h-4 w-4 rounded-full border-4 border-secondary box-content flex-shrink-0">
                            </div>
-                           <div className={`w-1/2 flex ${index % 2 === 0 ? 'justify-start pl-8' : 'justify-end pr-8'}`}>
+                           <div className={`w-1/2 flex ${index % 2 === 0 ? 'justify-start pl-8 text-left' : 'justify-end pr-8 text-right'}`}>
                               {index % 2 === 0 && (
-                                <div className="p-6 bg-card rounded-lg shadow-lg w-full md:w-auto text-left">
+                                <div className="p-6 bg-card rounded-lg shadow-lg w-full">
                                     <p className="text-2xl font-bold font-headline text-primary">{item.year}</p>
                                     <h3 className="text-xl font-semibold font-headline mt-2">{item.event}</h3>
                                     <p className="text-muted-foreground mt-1 text-sm">{item.description}</p>
