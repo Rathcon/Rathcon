@@ -72,24 +72,31 @@ export default function AboutPage() {
                     Tracing our path from a small startup to an industry leader.
                 </p>
             </div>
-            <div className="relative ps-4">
-                <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-primary/20 md:-translate-x-1/2"></div>
+            <div className="relative">
+                <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-primary/20 -translate-x-1/2"></div>
                 {timeline.map((item, index) => (
-                    <div key={item.year} className="relative mb-8">
-                        <div className="absolute -left-2 top-1 md:left-1/2 md:top-1/2 md:-translate-y-1/2 md:-translate-x-1/2 bg-primary rounded-full p-2">
+                    <div key={item.year} className="relative mb-8 flex justify-center">
+                       <div className={`w-1/2 ${index % 2 === 0 ? 'text-right pr-8' : 'pl-8'}`}>
+                         {index % 2 === 0 && (
+                            <div className="p-6 bg-card rounded-lg shadow-none text-right">
+                                <p className="text-2xl font-bold font-headline text-primary">{item.year}</p>
+                                <h3 className="text-xl font-semibold font-headline mt-2">{item.event}</h3>
+                                <p className="text-muted-foreground mt-1 text-sm">{item.description}</p>
+                            </div>
+                         )}
+                       </div>
+                        <div className="absolute top-1/2 -translate-y-1/2 bg-primary rounded-full p-2">
                              <CheckCircle className="h-5 w-5 text-primary-foreground" />
                         </div>
-                        <div className={`md:flex md:items-center ${index % 2 === 0 ? 'md:flex-row-reverse' : ''} ms-8 md:ms-0`}>
-                            <div className="md:w-5/12">
-                               <div className={`p-6 bg-card rounded-lg shadow-none ${index % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>
-                                    <p className="text-2xl font-bold font-headline text-primary">{item.year}</p>
-                                    <h3 className="text-xl font-semibold font-headline mt-2">{item.event}</h3>
-                                    <p className="text-muted-foreground mt-1 text-sm">{item.description}</p>
-                                </div>
+                       <div className={`w-1/2 ${index % 2 !== 0 ? 'text-left pl-8' : 'pr-8'}`}>
+                         {index % 2 !== 0 && (
+                            <div className="p-6 bg-card rounded-lg shadow-none text-left">
+                                <p className="text-2xl font-bold font-headline text-primary">{item.year}</p>
+                                <h3 className="text-xl font-semibold font-headline mt-2">{item.event}</h3>
+                                <p className="text-muted-foreground mt-1 text-sm">{item.description}</p>
                             </div>
-                            <div className="md:w-2/12"></div>
-                            <div className="w-5/12"></div>
-                        </div>
+                         )}
+                       </div>
                     </div>
                 ))}
             </div>
