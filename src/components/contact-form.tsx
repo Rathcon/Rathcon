@@ -46,7 +46,7 @@ export function ContactForm() {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    // In a real app, you would send this data to your backend
+    // In a real app, you would send this data to your backend and makes the points too 
     console.log(values);
     toast({
       title: 'Message Sent!',

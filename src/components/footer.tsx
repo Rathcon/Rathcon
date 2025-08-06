@@ -29,13 +29,18 @@ export function Footer() {
           <div className="space-y-4">
             <h4 className="font-headline font-semibold">Contact Us</h4>
             <ul className="space-y-2 text-sm">
-              <li className="flex items-center gap-2">
-                <MapPin className="h-4 w-4 text-primary" />
-                <span>123 Construction Ave, Buildtown, USA</span>
+              <li className="flex items-start gap-2">
+                <MapPin className="h-4 w-4 text-primary mt-0.5" />
+                <div>
+                  <div>RATHCON CONSTRUCTION PRIVATE LIMITED</div>
+                  <div>JAI BHIM NAGAR 2, NR. HANUMAN MANDIR</div>
+                  <div>THANE KALWA, THANE-400605</div>
+                  <div>MAHARASHTRA</div>
+                </div>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-primary" />
-                <span>(123) 456-7890</span>
+                <span>8928551747</span>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-primary" />

@@ -25,7 +25,12 @@ export default function ContactPage() {
                         </div>
                         <div>
                             <h3 className="text-lg font-semibold font-headline">Our Office</h3>
-                            <p className="text-muted-foreground">123 Construction Ave, Buildtown, USA 12345</p>
+                            <p className="text-muted-foreground">
+                              RATHCON CONSTRUCTION PRIVATE LIMITED<br />
+                              JAI BHIM NAGAR 2, NR. HANUMAN MANDIR<br />
+                              THANE KALWA, THANE-400605<br />
+                              MAHARASHTRA
+                            </p>
                         </div>
                      </div>
                       <div className="flex items-start gap-4">
@@ -34,7 +39,7 @@ export default function ContactPage() {
                         </div>
                         <div>
                             <h3 className="text-lg font-semibold font-headline">Phone</h3>
-                            <p className="text-muted-foreground">(123) 456-7890</p>
+                            <p className="text-muted-foreground">8928551747</p>
                         </div>
                      </div>
                       <div className="flex items-start gap-4">
