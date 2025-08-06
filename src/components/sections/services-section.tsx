@@ -40,14 +40,14 @@ export function ServicesSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service) => (
-            <Card key={service.title} className="text-center flex flex-col items-center p-6 bg-secondary/50 hover:bg-secondary hover:-translate-y-1 transition-all duration-300">
-              <CardHeader className="p-0">
-                <div className="bg-primary/10 text-primary rounded-full p-4 mb-4">
-                  <service.icon className="w-8 h-8" />
+            <Card key={service.title} className="flex flex-col p-6 bg-secondary/50 hover:border-primary/50 hover:bg-secondary transition-all duration-300">
+              <CardHeader className="p-0 flex-row items-center gap-4">
+                <div className="bg-primary/10 text-primary rounded-lg p-3">
+                  <service.icon className="w-6 h-6" />
                 </div>
-                <CardTitle className="font-headline text-xl">{service.title}</CardTitle>
+                <CardTitle className="font-headline text-lg">{service.title}</CardTitle>
               </CardHeader>
-              <CardContent className="p-0 mt-4 text-muted-foreground text-sm">
+              <CardContent className="p-0 mt-4 text-muted-foreground text-sm flex-grow">
                 <p>{service.description}</p>
               </CardContent>
             </Card>
