@@ -53,19 +53,16 @@ export default function ServicesPage() {
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {allServices.map((service) => (
-              <Card key={service.title} className="flex flex-col text-left p-6 hover:bg-secondary/50 hover:-translate-y-1 transition-all duration-300">
-                <CardHeader>
-                  <div className="flex items-start gap-4">
-                    <div className="bg-primary/10 text-primary rounded-lg p-3">
-                      <service.icon className="w-6 h-6" />
+              <Card key={service.title} className="bg-card border-border/50 group relative overflow-hidden rounded-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col">
+                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <CardHeader className="p-8">
+                    <div className="bg-primary/10 text-primary rounded-lg p-4 self-start shrink-0 transition-all duration-300 group-hover:bg-primary group-hover:text-primary-foreground group-hover:scale-110">
+                      <service.icon className="w-8 h-8" />
                     </div>
-                    <div>
-                      <CardTitle className="font-headline text-2xl">{service.title}</CardTitle>
-                    </div>
-                  </div>
                 </CardHeader>
-                <CardContent className="flex-grow">
-                  <p className="text-muted-foreground">{service.description}</p>
+                <CardContent className="p-8 pt-0 flex-grow flex flex-col">
+                  <CardTitle className="font-headline text-xl mb-4">{service.title}</CardTitle>
+                  <p className="text-muted-foreground text-sm flex-grow">{service.description}</p>
                 </CardContent>
               </Card>
             ))}

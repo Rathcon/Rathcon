@@ -38,18 +38,21 @@ export function ServicesSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {services.map((service) => (
-            <Card key={service.title} className="flex flex-col p-6 bg-secondary/50 hover:border-primary/50 hover:bg-secondary transition-all duration-300">
-              <CardHeader className="p-0 flex-row items-center gap-4">
-                <div className="bg-primary/10 text-primary rounded-lg p-3">
-                  <service.icon className="w-6 h-6" />
-                </div>
-                <CardTitle className="font-headline text-lg">{service.title}</CardTitle>
-              </CardHeader>
-              <CardContent className="p-0 mt-4 text-muted-foreground text-sm flex-grow">
-                <p>{service.description}</p>
-              </CardContent>
+            <Card key={service.title} className="bg-card border-border/50 group relative overflow-hidden rounded-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                 <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <CardHeader className="flex flex-row items-center gap-6 p-6">
+                    <div className="bg-primary/10 text-primary rounded-lg p-4 shrink-0 transition-all duration-300 group-hover:bg-primary group-hover:text-primary-foreground group-hover:scale-110">
+                        <service.icon className="w-8 h-8" />
+                    </div>
+                    <div>
+                        <CardTitle className="font-headline text-xl leading-tight">{service.title}</CardTitle>
+                    </div>
+                </CardHeader>
+                <CardContent className="p-6 pt-0">
+                    <p className="text-muted-foreground text-sm">{service.description}</p>
+                </CardContent>
             </Card>
           ))}
         </div>
