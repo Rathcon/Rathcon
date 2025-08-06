@@ -10,61 +10,56 @@ const allServices: Service[] = [
     icon: Home,
     title: 'Residential Construction',
     description: 'We build custom homes with unparalleled attention to detail and quality craftsmanship, creating spaces that are perfectly tailored to your lifestyle and needs.',
-    image: '/WhatsApp Image 2025-08-06 at 8.54.43 AM.jpeg',
+    image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop&auto=format&q=80',
     features: ['Custom Design', 'Quality Materials', 'Timeline Management']
   },
   {
     icon: Building2,
     title: 'Commercial Construction',
     description: 'From state-of-the-art office buildings to large-scale retail spaces, we deliver functional, aesthetic, and impressive commercial properties on time and on budget.',
-    image: '/WhatsApp Image 2025-08-06 at 8.54.42 AM (2).jpeg',
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop&auto=format&q=80',
     features: ['Large Scale Projects', 'Modern Architecture', 'Efficient Planning']
   },
   {
     icon: Paintbrush,
     title: 'Interior Design & Finishing',
     description: 'Our talented design team creates beautiful and functional interiors that reflect your personal style, enhancing the comfort and value of your space.',
-    image: '/WhatsApp Image 2025-08-06 at 8.54.42 AM (1).jpeg',
+    image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=400&fit=crop&auto=format&q=80',
     features: ['Custom Interiors', 'Space Planning', 'Material Selection']
   },
   {
     icon: Wrench,
     title: 'Renovations & Remodeling',
     description: 'Breathe new life into your existing space with our expert renovation and remodeling services. We handle projects of all sizes with precision and care.',
-    image: '/WhatsApp Image 2025-08-06 at 8.54.42 AM.jpeg',
+    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=400&fit=crop&auto=format&q=80',
     features: ['Structural Updates', 'Modern Upgrades', 'Value Enhancement']
   },
   {
     icon: Square,
     title: 'Tile Installation & Fitting',
     description: 'Professional tile installation services for floors, walls, and backsplashes. We work with ceramic, porcelain, natural stone, and mosaic tiles. Our expert craftsmen ensure precise cutting, proper grouting, and seamless installation.',
-    image: '/WhatsApp Image 2025-08-06 at 8.54.41 AM (1).jpeg',
+    image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=400&fit=crop&auto=format&q=80',
     features: ['Floor & Wall Tiling', 'Precise Cutting', 'Professional Grouting']
   },
   {
     icon: Layers,
     title: 'Granite & Marble Work',
     description: 'Premium granite and marble installation for countertops, flooring, and wall cladding. We offer custom cutting, polishing, and installation services for luxurious finishes.',
-    image: '/WhatsApp Image 2025-08-06 at 8.54.41 AM.jpeg',
+    image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=400&fit=crop&auto=format&q=80',
     features: ['Custom Countertops', 'Wall Cladding', 'Premium Finishing']
   },
   {
     icon: Hammer,
     title: 'Civil Works & Finishing',
     description: 'Comprehensive civil works including concrete work, masonry, plastering, and finishing touches. We provide structural integrity with aesthetic appeal.',
-    image: '/WhatsApp Image 2025-08-06 at 8.54.43 AM.jpeg',
+    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=400&fit=crop&auto=format&q=80',
     features: ['Concrete Work', 'Masonry Services', 'Plastering & Finishing']
-  },
-  {
-    icon: HardHat,
-    title: 'Project Management',
-    description: 'Our certified project managers oversee every phase of your project, ensuring clear communication and completion on time, within budget, and to the highest standards.',
-    features: ['Timeline Management', 'Budget Control', 'Quality Assurance']
   },
   {
     icon: LandPlot,
     title: 'Pre-Construction & Planning',
     description: 'We offer detailed pre-construction services including site analysis, feasibility studies, cost estimation, and strategic planning to ensure project success.',
+    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=400&fit=crop&auto=format&q=80',
     features: ['Site Analysis', 'Cost Estimation', 'Strategic Planning']
   },
 ];
