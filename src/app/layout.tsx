@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
-import { LoadingWrapper } from '@/components/ui/loading-wrapper';
 
 export const metadata: Metadata = {
   title: 'Rathcon - Construction Excellence',
@@ -22,11 +21,9 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet" />
       </head>
       <body className="font-body antialiased">
-        <LoadingWrapper delay={2000}>
-          <Header />
-          <main className="min-h-screen">{children}</main>
-          <Footer />
-        </LoadingWrapper>
+        <Header />
+        <main className="min-h-screen">{children}</main>
+        <Footer />
       </body>
     </html>
   );
