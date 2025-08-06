@@ -23,3 +23,9 @@ export type Testimonial = {
   avatar: string;
   dataAiHint: string;
 };
+
+export type TimelineEvent = {
+  year: string;
+  event: string;
+  description: string;
+};
