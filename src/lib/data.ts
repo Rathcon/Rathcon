@@ -78,7 +78,7 @@ export const clients: Client[] = [
     name: 'Ramesh Gupta',
     company: 'Gupta Manufacturing',
     project: 'Industrial Warehouse',
-    testimonial: 'The warehouse construction was completed ahead of schedule with superior quality. Rathcon Construction's expertise in industrial projects is outstanding.',
+    testimonial: 'The warehouse construction was completed ahead of schedule with superior quality. Rathcon Construction\'s expertise in industrial projects is outstanding.',
     rating: 5,
     location: 'Bhiwandi',
     projectType: 'Industrial Construction',
