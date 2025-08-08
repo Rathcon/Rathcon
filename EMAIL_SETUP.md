@@ -184,3 +184,4 @@ For issues with the email service:
 2. Check the server logs
 3. Verify environment variables
 4. Test with different email providers
+
