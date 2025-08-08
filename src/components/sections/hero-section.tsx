@@ -51,7 +51,7 @@ export function HeroSection() {
 
                 <div className="flex items-center gap-8 pt-4">
                   <div className="text-sm">
-                    <p className="font-semibold text-foreground">2+ Happy Clients</p>
+                    <p className="font-semibold text-foreground">10+ Happy Clients</p>
                     <p className="text-muted-foreground">Trust us with their projects</p>
                   </div>
                 </div>

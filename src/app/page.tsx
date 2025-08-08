@@ -1,13 +1,10 @@
 import { HeroSection } from '@/components/sections/hero-section';
 import { ServicesSection } from '@/components/sections/services-section';
-import { ProjectsSection } from '@/components/sections/projects-section';
 import { TestimonialsSection } from '@/components/sections/testimonials-section';
 import { StatsSection } from '@/components/sections/stats-section';
 import { CTASection } from '@/components/sections/cta-section';
 import { FeaturesSection } from '@/components/sections/features-section';
 import { ProcessSection } from '@/components/sections/process-section';
-import { TeamSection } from '@/components/sections/team-section';
-import { AwardsSection } from '@/components/sections/awards-section';
 
 export const metadata = {
   title: 'Rathcon Construction - Leading Construction Company in Mumbai & Thane | Residential & Commercial Projects',
@@ -65,11 +62,8 @@ export default function HomePage() {
       <StatsSection />
       <ServicesSection />
       <FeaturesSection />
-      <ProjectsSection />
       <ProcessSection />
       <TestimonialsSection />
-      <TeamSection />
-      <AwardsSection />
       <CTASection />
     </>
   );

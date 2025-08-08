@@ -15,7 +15,7 @@ export function TestimonialsSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {clients.map((client) => (
             <Card key={client.id} className="bg-card border-border/50 hover:shadow-lg transition-all duration-300">
               <CardContent className="p-6">
@@ -38,9 +38,6 @@ export function TestimonialsSection() {
                   )}
                   <div className="text-xs text-primary mt-1">
                     {client.projectType} • {client.location}
-                  </div>
-                  <div className="text-xs text-muted-foreground mt-1">
-                    Project Value: {client.projectValue}
                   </div>
                 </div>
               </CardContent>

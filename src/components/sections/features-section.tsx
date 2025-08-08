@@ -73,7 +73,7 @@ export function FeaturesSection() {
         <AnimatedSection animation="fadeInUp" delay={800}>
           <div className="mt-16 grid md:grid-cols-3 gap-8 text-center">
             <div className="space-y-2 group hover:scale-105 transition-transform duration-300">
-                              <div className="text-4xl font-bold text-primary group-hover:text-primary/80">2+</div>
+                              <div className="text-4xl font-bold text-primary group-hover:text-primary/80">10+</div>
               <div className="text-muted-foreground">Projects Completed</div>
             </div>
             <div className="space-y-2 group hover:scale-105 transition-transform duration-300">

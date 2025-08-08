@@ -1,8 +1,8 @@
 import { Building, Calendar, Smile } from "lucide-react";
 
 const stats = [
-    { value: '15+', label: 'Years of Experience', icon: Calendar },
-    { value: '500+', label: 'Projects Completed', icon: Building },
+    { value: '1+', label: 'Years of Experience', icon: Calendar },
+    { value: '10+', label: 'Projects Completed', icon: Building },
     { value: '99%', label: 'Happy Clients', icon: Smile },
 ]
 

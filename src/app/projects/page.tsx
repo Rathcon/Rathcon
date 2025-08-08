@@ -1,10 +1,9 @@
-'use client';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { MapPin, Calendar, DollarSign, Ruler } from 'lucide-react';
+import { MapPin, Calendar, Ruler } from 'lucide-react';
 import { projects } from '@/lib/data';
 
 export const metadata = {
@@ -23,7 +22,7 @@ export const metadata = {
 };
 
 export default function ProjectsPage() {
-  const projectTypes = ['all', 'residential', 'commercial', 'renovation', 'interior'];
+  const project = projects[0]; // Get the single project
   
   return (
     <>
@@ -41,82 +40,82 @@ export default function ProjectsPage() {
       </section>
 
       <section className="py-16">
-        <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project) => (
-              <Card key={project.id} className="bg-card border-border/50 group relative overflow-hidden rounded-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col">
-                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                
-                <div className="relative h-64 overflow-hidden">
-                  <Image
-                    src={project.images[0]}
-                    alt={project.title}
-                    fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-black/20"></div>
-                  <div className="absolute top-4 left-4">
-                    <Badge variant="secondary" className="bg-white/90 text-foreground">
-                      {project.status}
-                    </Badge>
-                  </div>
+        <div className="container max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            {/* Image Carousel */}
+            <div className="space-y-4">
+              <div className="relative h-96 overflow-hidden rounded-lg">
+                <Image
+                  src={project.images[0]}
+                  alt={project.title}
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-black/20"></div>
+                <div className="absolute top-4 left-4">
+                  <Badge variant="secondary" className="bg-white/90 text-foreground">
+                    {project.status}
+                  </Badge>
                 </div>
-                
-                <CardHeader className="p-6">
-                  <div className="space-y-2">
-                    <CardTitle className="font-headline text-xl">{project.title}</CardTitle>
-                    <CardDescription className="text-sm text-muted-foreground">
-                      {project.description}
-                    </CardDescription>
+              </div>
+              
+              {/* Thumbnail Grid */}
+              <div className="grid grid-cols-3 gap-2">
+                {project.images.slice(1).map((image, index) => (
+                  <div key={index} className="relative h-24 overflow-hidden rounded-lg">
+                    <Image
+                      src={image}
+                      alt={`${project.title} - Image ${index + 2}`}
+                      fill
+                      className="object-cover hover:scale-110 transition-transform duration-300"
+                    />
                   </div>
-                </CardHeader>
-                
-                <CardContent className="p-6 pt-0 flex-grow flex flex-col">
-                  <div className="space-y-3 mb-4">
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <MapPin className="h-4 w-4" />
-                      <span>{project.location}</span>
+                ))}
+              </div>
+            </div>
+
+            {/* Project Details */}
+            <div className="space-y-6">
+              <div>
+                <h2 className="text-3xl font-bold font-headline mb-4">{project.title}</h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  {project.description}
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <MapPin className="h-4 w-4" />
+                  <span>{project.location}</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <Ruler className="h-4 w-4" />
+                  <span>{project.area}</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <Calendar className="h-4 w-4" />
+                  <span>{project.duration}</span>
+                </div>
+              </div>
+              
+              <div className="space-y-3">
+                <h4 className="font-semibold text-lg text-primary">Key Features:</h4>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  {project.features.map((feature, index) => (
+                    <div key={index} className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-primary rounded-full"></div>
+                      <span className="text-sm">{feature}</span>
                     </div>
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <Ruler className="h-4 w-4" />
-                      <span>{project.area}</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <Calendar className="h-4 w-4" />
-                      <span>{project.duration}</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <DollarSign className="h-4 w-4" />
-                      <span>{project.value}</span>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-2 mb-4">
-                    <h4 className="font-semibold text-sm text-primary">Key Features:</h4>
-                    <div className="flex flex-wrap gap-1">
-                      {project.features.slice(0, 3).map((feature, index) => (
-                        <Badge key={index} variant="outline" className="text-xs">
-                          {feature}
-                        </Badge>
-                      ))}
-                      {project.features.length > 3 && (
-                        <Badge variant="outline" className="text-xs">
-                          +{project.features.length - 3} more
-                        </Badge>
-                      )}
-                    </div>
-                  </div>
-                  
-                  <div className="mt-auto">
-                    <Button asChild size="sm" className="w-full">
-                      <Link href={`/projects/${project.id}`}>
-                        View Details
-                      </Link>
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+                  ))}
+                </div>
+              </div>
+
+              <div className="pt-4">
+                <Button asChild size="lg" className="w-full">
+                  <Link href="/contact">Get Free Quote</Link>
+                </Button>
+              </div>
+            </div>
           </div>
           
           <div className="text-center mt-16">
