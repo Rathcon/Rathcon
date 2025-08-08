@@ -1,21 +1,43 @@
 import type { LucideIcon } from "lucide-react";
 
-export type Service = {
-  icon: LucideIcon;
+export interface Service {
+  icon: any;
   title: string;
   description: string;
   image?: string;
   features?: string[];
-};
+}
 
-export type Project = {
-  id: number;
+export interface Client {
+  id: string;
+  name: string;
+  company?: string;
+  project: string;
+  testimonial: string;
+  rating: number;
+  image?: string;
+  location?: string;
+  projectType: string;
+  projectValue?: string;
+  completedDate: string;
+}
+
+export interface Project {
+  id: string;
   title: string;
-  category: 'Residential' | 'Commercial' | 'Interior Design' | 'Renovations';
-  image: string;
   description: string;
-  dataAiHint: string;
-};
+  type: 'residential' | 'commercial' | 'renovation' | 'interior';
+  category: string;
+  location: string;
+  area: string;
+  duration: string;
+  value: string;
+  images: string[];
+  features: string[];
+  client: string;
+  completedDate: string;
+  status: 'completed' | 'ongoing' | 'upcoming';
+}
 
 export type Testimonial = {
   id: number;

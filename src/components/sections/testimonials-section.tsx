@@ -1,70 +1,61 @@
 import { Star, Quote } from 'lucide-react';
-
-const testimonials = [
-  {
-    name: "Rajesh Kumar",
-    role: "Naval Base Commanding Officer",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face&auto=format&q=80",
-    content: "Rathcon Construction delivered exceptional quality in our Naval Base Main Gate project. Their expertise in civil works, tile fitting, and granite installation exceeded our expectations. The project was completed on time with superior craftsmanship.",
-    rating: 5,
-    project: "Naval Base Main Gate Construction"
-  },
-  {
-    name: "Priya Sharma",
-    role: "Property Developer, Karwar",
-    image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face&auto=format&q=80",
-    content: "Working with Rathcon for our residential complex was outstanding. Their attention to detail in tile work, granite installation, and overall construction quality is unmatched. They truly understand Indian construction standards and delivered beyond our expectations.",
-    rating: 5,
-    project: "Residential Complex Development"
-  }
-];
+import { Card, CardContent } from '@/components/ui/card';
+import { clients } from '@/lib/data';
 
 export function TestimonialsSection() {
   return (
-    <section className="py-20 bg-secondary">
+    <section className="py-16 bg-secondary">
       <div className="container">
-        <div className="text-center space-y-4 mb-16 animate-fadeInUp">
-          <h2 className="text-4xl md:text-5xl font-bold font-headline text-foreground">
-            What Our <span className="text-primary">Clients Say</span>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold font-headline mb-4">
+            What Our Clients Say
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what our satisfied clients have to say about their experience with Rathcon.
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Don't just take our word for it. Here's what our satisfied clients have to say about their experience with Rathcon Construction.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={index}
-              className="group bg-card rounded-2xl p-8 border border-border hover:border-primary/50 hover:shadow-xl transition-all duration-300 animate-fadeInUp text-center"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="flex items-center justify-center gap-1 mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              
-              <div className="relative mb-6">
-                <Quote className="absolute -top-2 -left-2 h-8 w-8 text-primary/20" />
-                <p className="text-muted-foreground leading-relaxed pl-6">
-                  "{testimonial.content}"
-                </p>
-              </div>
-              
-              <div className="text-center">
-                <h4 className="font-semibold text-foreground text-lg">{testimonial.name}</h4>
-                <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                <p className="text-xs text-primary font-medium mt-1">{testimonial.project}</p>
-              </div>
-            </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {clients.map((client) => (
+            <Card key={client.id} className="bg-card border-border/50 hover:shadow-lg transition-all duration-300">
+              <CardContent className="p-6">
+                <div className="flex items-center gap-1 mb-4">
+                  {[...Array(client.rating)].map((_, i) => (
+                    <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                
+                <Quote className="h-8 w-8 text-primary/20 mb-4" />
+                
+                <blockquote className="text-sm text-muted-foreground mb-4 italic">
+                  "{client.testimonial}"
+                </blockquote>
+                
+                <div className="border-t pt-4">
+                  <div className="font-semibold text-sm">{client.name}</div>
+                  {client.company && (
+                    <div className="text-xs text-muted-foreground">{client.company}</div>
+                  )}
+                  <div className="text-xs text-primary mt-1">
+                    {client.projectType} • {client.location}
+                  </div>
+                  <div className="text-xs text-muted-foreground mt-1">
+                    Project Value: {client.projectValue}
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           ))}
         </div>
 
-        <div className="mt-16 text-center animate-fadeInUp">
-          <div className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-full text-lg font-semibold">
-            <Star className="h-5 w-5" />
-            Average Rating: 4.9/5
+        <div className="text-center mt-12">
+          <div className="bg-primary/10 rounded-lg p-6 max-w-4xl mx-auto">
+            <h3 className="text-xl font-bold font-headline mb-2">
+              Trusted by 100+ Happy Clients
+            </h3>
+            <p className="text-muted-foreground">
+              Join our growing list of satisfied customers who have chosen Rathcon Construction for their building needs.
+            </p>
           </div>
         </div>
       </div>
