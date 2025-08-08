@@ -181,7 +181,7 @@ const createAutoResponseEmail = (data: {
             </div>
             
             <div style="text-align: center; margin: 30px 0;">
-              <a href="https://rathconconstructions.com" class="button">🌐 Visit Our Website</a>
+              <a href="https://www.rathconconstruction.com" class="button">🌐 Visit Our Website</a>
               <a href="tel:8928551747" class="button">📞 Call Us Now</a>
             </div>
             
