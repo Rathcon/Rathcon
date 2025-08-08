@@ -57,8 +57,7 @@ const createContactFormEmail = (data: {
       <body>
         <div class="container">
           <div class="header">
-            <img src="cid:logo" alt="Rathcon Construction Logo" class="logo" />
-        
+            <h1>Rathcon Construction</h1>
             <p>New Contact Form Submission</p>
           </div>
           <div class="content">
@@ -145,7 +144,7 @@ const createAutoResponseEmail = (data: {
       <body>
         <div class="container">
           <div class="header">
-            <img src="cid:logo" alt="Rathcon Construction Logo" class="logo" />
+            <h1>Rathcon Construction</h1>
             <p style="margin: 10px 0 0 0; font-size: 18px; opacity: 0.9;">Construction Excellence</p>
           </div>
           <div class="content">
@@ -237,14 +236,7 @@ export const sendContactFormEmail = async (data: {
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: 'contact@rathconconstructions.com',
-      ...companyEmail,
-      attachments: [
-        {
-          filename: 'logo.png',
-          path: './public/logo.png',
-          cid: 'logo'
-        }
-      ]
+      ...companyEmail
     });
 
     // Send auto-response to customer
@@ -252,14 +244,7 @@ export const sendContactFormEmail = async (data: {
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: data.email,
-      ...autoResponse,
-      attachments: [
-        {
-          filename: 'logo.png',
-          path: './public/logo.png',
-          cid: 'logo'
-        }
-      ]
+      ...autoResponse
     });
 
     return { success: true };
@@ -312,7 +297,7 @@ export const sendQuoteRequestEmail = async (data: {
         <body>
           <div class="container">
             <div class="header">
-              <img src="cid:logo" alt="Rathcon Construction Logo" class="logo" />
+              <h1>Rathcon Construction</h1>
               <p style="margin: 10px 0 0 0; font-size: 18px; opacity: 0.9;">New Quote Request</p>
             </div>
             <div class="content">
@@ -378,14 +363,7 @@ export const sendQuoteRequestEmail = async (data: {
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: 'contact@rathconconstructions.com',
-      ...quoteEmail,
-      attachments: [
-        {
-          filename: 'logo.png',
-          path: './public/logo.png',
-          cid: 'logo'
-        }
-      ]
+      ...quoteEmail
     });
 
     return { success: true };
