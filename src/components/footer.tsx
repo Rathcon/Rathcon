@@ -76,6 +76,17 @@ export function Footer() {
 
         <div className="mt-8 pt-8 border-t border-border/50 text-center text-sm text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} Rathcon Constructions. All Rights Reserved.</p>
+          <p className="mt-2">
+            Designed and Developed by{' '}
+            <a 
+              href="https://www.minmind.in" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary hover:underline transition-colors"
+            >
+              MinMind
+            </a>
+          </p>
         </div>
       </div>
     </footer>
