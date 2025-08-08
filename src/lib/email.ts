@@ -1,13 +1,24 @@
 import nodemailer from 'nodemailer';
 
-// Email configuration
-const transporter = nodemailer.createTransport({
-  service: 'gmail', // You can change this to your email provider
-  auth: {
-    user: process.env.EMAIL_USER || 'your-email@gmail.com',
-    pass: process.env.EMAIL_PASS || 'your-app-password', // Use app password for Gmail
-  },
-});
+// Email configuration with better production handling
+const createTransporter = () => {
+  // Check if we're in production and have proper credentials
+  const emailUser = process.env.EMAIL_USER;
+  const emailPass = process.env.EMAIL_PASS;
+  
+  if (!emailUser || !emailPass) {
+    console.error('Email configuration missing: EMAIL_USER or EMAIL_PASS not set');
+    return null;
+  }
+
+  return nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: emailUser,
+      pass: emailPass,
+    },
+  });
+};
 
 // Email templates
 const createContactFormEmail = (data: {
@@ -215,11 +226,17 @@ export const sendContactFormEmail = async (data: {
   message: string;
 }) => {
   try {
+    const transporter = createTransporter();
+    if (!transporter) {
+      console.error('Email transporter not configured - missing environment variables');
+      return { success: false, error: 'Email service not configured' };
+    }
+
     // Send email to company
     const companyEmail = createContactFormEmail(data);
     await transporter.sendMail({
-      from: process.env.EMAIL_USER || 'your-email@gmail.com',
-      to: 'contact@rathconconstructions.com', // Your company email
+      from: process.env.EMAIL_USER,
+      to: 'contact@rathconconstructions.com',
       ...companyEmail,
       attachments: [
         {
@@ -233,7 +250,7 @@ export const sendContactFormEmail = async (data: {
     // Send auto-response to customer
     const autoResponse = createAutoResponseEmail(data);
     await transporter.sendMail({
-      from: process.env.EMAIL_USER || 'your-email@gmail.com',
+      from: process.env.EMAIL_USER,
       to: data.email,
       ...autoResponse,
       attachments: [
@@ -262,6 +279,12 @@ export const sendQuoteRequestEmail = async (data: {
   timeline: string;
 }) => {
   try {
+    const transporter = createTransporter();
+    if (!transporter) {
+      console.error('Email transporter not configured - missing environment variables');
+      return { success: false, error: 'Email service not configured' };
+    }
+
     const quoteEmail = {
       subject: `New Quote Request: ${data.projectType}`,
       html: `
@@ -353,7 +376,7 @@ export const sendQuoteRequestEmail = async (data: {
     };
 
     await transporter.sendMail({
-      from: process.env.EMAIL_USER || 'your-email@gmail.com',
+      from: process.env.EMAIL_USER,
       to: 'contact@rathconconstructions.com',
       ...quoteEmail,
       attachments: [
