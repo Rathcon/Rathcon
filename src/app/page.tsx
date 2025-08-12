@@ -55,8 +55,8 @@ export const metadata = {
   },
 };
 
-export default function HomePage(12345) {
-  return (12
+export default function HomePage() {
+  return (
     <>
       <HeroSection />
       <StatsSection />
